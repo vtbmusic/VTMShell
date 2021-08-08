@@ -13,10 +13,16 @@
 """
 
 import os
+import json
 from os import *
 from cmd import Cmd
+from platform import version
 from libs.time import *
 from libs.clear import *
+from libs.file import *
+
+version = 1.0
+config = None
 
 class VTMShell(Cmd):
     prompt = '\033[0;32;40mVTMShell> \033[0m'
@@ -28,23 +34,25 @@ class VTMShell(Cmd):
     | |/ / / / / /  / /___/ / / / /  __/ / /  
     |___/ /_/ /_/  /_//____/_/ /_/\___/_/_/
     
-    VTMShell V1.0 
+    VTMShell V%s 
     Welcome! Type ? to list commands
 
+    Now Time is %s
+
     \033[0m
-    """
+    """ % (version, nowtime())
 
     def do_exit(self, inp):
-        'exit the application. Shorthand: x q Ctrl-D.'
+        'exit: exit the application. Shorthand: x q Ctrl-D.'
         print("Bye")
         return True
 
     def do_time(self, inp):
-        'Get current system time'
+        'time: Get current system time'
         print("Time: ", nowtime())
 
     def do_dir(self, arg):
-        'syntax: dir path -- displaya list of files and directories'
+        'die: syntax: dir path -- displaya list of files and directories'
         if not arg:
             print("\n".join(os.listdir(".")))
         elif os.path.exists(arg):
@@ -53,10 +61,11 @@ class VTMShell(Cmd):
             print("No such pathexists.")
 
     def do_ls(self, arg):
-        'syntax: dir path -- displaya list of files and directories'
+        'ls: syntax: dir path -- displaya list of files and directories'
         self.do_dir(arg)
 
     def do_clear(self, inp):
+        'clear: Clear Screen'
         clear()
 
     def default(self, inp):
@@ -67,5 +76,8 @@ class VTMShell(Cmd):
 
 
 if __name__ == '__main__':
-    clear()
-    VTMShell().cmdloop()
+    config = json.loads(read_file('./configs/main.json'))
+    print(type(config))
+    if(config != None):
+        clear()
+        VTMShell().cmdloop()
