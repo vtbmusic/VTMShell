@@ -14,7 +14,7 @@
 
 import os
 from cmd import Cmd
-from lib.time import time_
+from libs.time import time_
 
 
 class VTMShell(Cmd):
