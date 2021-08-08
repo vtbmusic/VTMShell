@@ -3,7 +3,7 @@
  * @Description: README
  * @Date: 2021-08-09 06:31:14
  * @LastEditors: Kuro Kitu
- * @LastEditTime: 2021-08-09 06:40:18
+ * @LastEditTime: 2021-08-09 06:41:23
 -->
 # VTBShell
 
@@ -67,9 +67,6 @@ python main.py
 
 
 欢迎提出 PR .
-
-
-提示: 如果编辑README, 请遵循 [standard-readme](https://github.com/RichardLitt/standard-readme) 的说明.
 
 ## 许可证
 
