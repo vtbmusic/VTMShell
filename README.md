@@ -3,7 +3,7 @@
  * @Description: README
  * @Date: 2021-08-09 06:31:14
  * @LastEditors: Kuro Kitu
- * @LastEditTime: 2021-08-09 06:43:09
+ * @LastEditTime: 2021-08-09 06:44:25
 -->
 # VTMShell
 
@@ -47,6 +47,8 @@
 ## 安装
 
 ```
+git clone https://github.com/vtbmusic/VTMShell.git
+cd VTMShell
 pip install -r requirements.txt
 ```
 
