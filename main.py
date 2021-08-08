@@ -44,6 +44,7 @@ class VTMShell(Cmd):
         self.do_dir(arg)
 
     def do_clear(self, inp):
+        
         pass
  
     def default(self, inp):
