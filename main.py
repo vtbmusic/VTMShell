@@ -43,8 +43,8 @@ class VTMShell(Cmd):
         'syntax: dir path -- displaya list of files and directories'
         self.do_dir(arg)
 
-    # def do_clear(self, inp):
-    #     clear()
+    def do_clear(self, inp):
+        pass
  
     def default(self, inp):
         if inp == 'x' or inp == 'q':
