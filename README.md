@@ -3,14 +3,14 @@
  * @Description: README
  * @Date: 2021-08-09 06:31:14
  * @LastEditors: Kuro Kitu
- * @LastEditTime: 2021-08-09 06:36:26
+ * @LastEditTime: 2021-08-09 06:40:18
 -->
 # VTBShell
 
 
 
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![VTMShell-Dev compliant](https://img.shields.io/badge/VTMShell-Dev-blue.svg?style=flat-square)](https://github.com/vtbmusic/VTMShell)
 
 
 
@@ -18,7 +18,6 @@
 
 
 
-TODO: 预留详细描述
 
 
 ## 目录
