@@ -21,6 +21,7 @@ from pathlib import Path
 from libs.time import *
 from libs.clear import *
 from libs.file import *
+from libs.fuckflyos import *
 
 version = 1.0
 config = None
@@ -79,8 +80,9 @@ class VTMShell(Cmd):
         'Get current path'
         print(self.dir)
 
-    def do_testargs(self, arg):
-        print("Args:", arg)
+    def do_flyos(self, arg):
+        'Fuck FlyOS'
+        runflyos()
 
     def default(self, inp):
         if inp == 'x' or inp == 'q':
